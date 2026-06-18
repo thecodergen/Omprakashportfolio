@@ -51,7 +51,7 @@
             </div>
             <div class="hero-image-wrapper">
                 <div class="profile-img-container" data-reveal>
-                    <img src="images/profile-outdoor.jpg" alt="Om Prakash Sethy" class="profile-image">
+                    <img src="images/profile-outdoor.jpg" alt="Om Prakash Sethy" class="profile-image" loading="lazy" onerror="this.onerror=null;this.src='images/profile-dark.png';">
                 </div>
             </div>
         </div>
@@ -63,6 +63,14 @@
         <div class="section-inner">
             <h2>By The Numbers</h2>
             <div class="stats-grid">
+                <div class="stat-card" data-reveal>
+                    <div class="stat-number"><span id="profile-total-views" class="counter" data-target="0">0</span>+</div>
+                    <div class="stat-label">Views on Profile</div>
+                </div>
+                <div class="stat-card" data-reveal>
+                    <div class="stat-number"><span id="profile-unique-visitors" class="counter" data-target="0">0</span></div>
+                    <div class="stat-label">Unique Visitors</div>
+                </div>
                 <div class="stat-card" data-reveal>
                     <div class="stat-number"><span class="counter" data-target="20">0</span>+</div>
                     <div class="stat-label">Projects Completed</div>
@@ -110,7 +118,7 @@
                     </div>
 
                     <div style="margin-top:18px;display:flex;gap:14px;flex-wrap:wrap;">
-                        <a class="btn btn-primary" href="Resume/Om%20Prakash%20Sethy.pdf.pdf" target="_blank" rel="noopener">Download Resume</a>
+                        <a class="btn btn-primary" href="Resume/Om%20Prakash%20Sethy.pdf" target="_blank" rel="noopener">Download Resume</a>
                         <a class="btn" href="https://wa.me/8338072738" target="_blank" rel="noopener">Let’s Talk</a>
                     </div>
 
@@ -711,8 +719,29 @@
             });
         }
 
+        // Profile views (total + unique) using Netlify Function
+        (async function loadProfileViews() {
+            try {
+                const res = await fetch('/.netlify/functions/profile-views', { method: 'POST' });
+                if (!res.ok) return;
+                const data = await res.json();
+
+                const totalEl = document.getElementById('profile-total-views');
+                const uniqueEl = document.getElementById('profile-unique-visitors');
+                if (totalEl) {
+                    totalEl.textContent = data.totalViews ?? '0';
+                }
+                if (uniqueEl) {
+                    uniqueEl.textContent = data.uniqueVisitors ?? '0';
+                }
+            } catch (e) {
+                // silently ignore
+            }
+        })();
+
         // Contact form (client-side) -> opens WhatsApp with prefilled message
         const form = document.querySelector('.contact-form');
+
         if (form) {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
