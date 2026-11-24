@@ -1,773 +1,1105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Prakash Sethy Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <title>Om Prakash Sethy — Software Developer & Technology Entrepreneur</title>
+  <meta name="description" content="Personal developer portfolio of Om Prakash Sethy: Software Developer, Full-Stack Engineer, AI/ML Enthusiast, and Founder of QuickHelper.">
+  <meta name="author" content="Om Prakash Sethy">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Om Prakash Sethy — Software Developer Portfolio">
+  <meta property="og:description" content="Building meaningful digital solutions through code, creativity, and innovation. Explore full-stack, .NET, and AI/ML projects.">
+  <meta property="og:image" content="images/hero-portrait.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/app-icon-192.png" type="image/png">
+
+  <!-- Google Fonts: Bodoni Moda, Cormorant Garamond, Montserrat, Italianno, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Italianno&family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Editorial Dark Emerald & Brushed Gold Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=14.0">
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <span class="logo-icon">✨</span>
-                    <span class="logo-text">Portfolio</span>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#stats" class="nav-link">Stats</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#journey" class="nav-link">Journey</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#highlights" class="nav-link">Highlights</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Reading Scroll Progress Bar -->
+  <div id="scroll-progress-bar" aria-hidden="true"></div>
 
-    <div id="page-loader"><div class="loader-ring"></div></div>
-    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  <!-- Ambient Cursor Light Glow -->
+  <div id="ambient-cursor-glow" aria-hidden="true"></div>
 
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-text">
-                <h1>Hello, I'm <span>Om Prakash Sethy</span></h1>
-                <h3><span id="typing" class="typing"></span></h3>
-                <p>I build modern websites, web applications, and innovative digital solutions.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn">Contact Me</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="profile-img-container" data-reveal>
-                    <img src="images/profile-outdoor.jpg" alt="Om Prakash Sethy" class="profile-image" loading="lazy" onerror="this.onerror=null;this.src='images/profile-dark.png';">
-                </div>
-            </div>
+  <!-- =============================================================================
+       1. STICKY GLASS NAVBAR & MASTHEAD
+       ============================================================================= -->
+  <header class="ops-navbar">
+    <div class="container navbar-inner">
+      <div class="nav-brand-group">
+        <a href="#hero" class="nav-monogram" aria-label="Om Prakash Sethy">
+          <span>OPS</span>
+        </a>
+      </div>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links-menu">
+          <li><a href="#vision" class="nav-link-item">Vision</a></li>
+          <li><a href="#about" class="nav-link-item">About</a></li>
+          <li><a href="#skills" class="nav-link-item">Skills</a></li>
+          <li><a href="#featured-work" class="nav-link-item">Work</a></li>
+          <li><a href="#experience" class="nav-link-item">Credentials</a></li>
+          <li><a href="#education" class="nav-link-item">Education</a></li>
+          <li><a href="#startup" class="nav-link-item">Startup</a></li>
+          <li><a href="#contact" class="nav-link-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions-right">
+        <div class="nav-year-badge">
+          <span>2026</span>
+          <strong>Software Developer</strong>
         </div>
-    </section>
 
+        <!-- Light / Dark Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme mode" title="Toggle Light / Dark Mode">
+          <i data-lucide="sun" style="width: 17px; height: 17px;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Stats Section - Unique Feature -->
-    <section id="stats" class="stats-section">
-        <div class="section-inner">
-            <h2>By The Numbers</h2>
-            <div class="stats-grid">
-                <div class="stat-card" data-reveal>
-                    <div class="stat-number"><span id="profile-total-views" class="counter" data-target="0">0</span>+</div>
-                    <div class="stat-label">Views on Profile</div>
-                </div>
-                <div class="stat-card" data-reveal>
-                    <div class="stat-number"><span id="profile-unique-visitors" class="counter" data-target="0">0</span></div>
-                    <div class="stat-label">Unique Visitors</div>
-                </div>
-                <div class="stat-card" data-reveal>
-                    <div class="stat-number"><span class="counter" data-target="20">0</span>+</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-card" data-reveal>
-                    <div class="stat-number"><span class="counter" data-target="19">0</span></div>
-                    <div class="stat-label">Certifications Earned</div>
-                </div>
-                <div class="stat-card" data-reveal>
-                    <div class="stat-number"><span class="counter" data-target="8">0</span>+</div>
-                    <div class="stat-label">Tech Skills Mastered</div>
-                </div>
-                <div class="stat-card" data-reveal>
-                    <div class="stat-number"><span class="counter" data-target="5">0</span></div>
-                    <div class="stat-label">Years of Learning</div>
-                </div>
+  <main>
+    <!-- =============================================================================
+         1. HERO SECTION: CINEMATIC PORTRAIT & MASSIVE HEADLINE
+         ============================================================================= -->
+    <section id="hero" class="ops-hero-section">
+      <div class="container">
+        <div class="hero-editorial-stage">
+          
+          <!-- Left Column: Services, Intro & Script Signature -->
+          <div class="hero-left-column">
+            
+            <!-- Live Radar Status Beacon -->
+            <div class="status-beacon-pill">
+              <span class="beacon-dot-container">
+                <span class="beacon-dot"></span>
+                <span class="beacon-ripple"></span>
+              </span>
+              <span class="beacon-text">Available for Software Roles</span>
             </div>
-        </div>
-    </section>
 
-    <section id="about">
-        <div class="section-inner">
-            <h2>About Me</h2>
-            <div class="about-grid">
-                <div class="about-photo glass" data-reveal aria-hidden="true"></div>
-                <div class="about-copy" data-reveal>
-                    <p>
-                        I am <b>Om Prakash Sethy</b> — a Full Stack Developer, Web Designer, and Computer Science student.
-                        I build modern websites, web applications, and innovative digital solutions.
-                    </p>
+            <ul class="hero-services-list">
+              <li class="hero-service-item">Full-Stack Development</li>
+              <li class="hero-service-item">.NET Engineering</li>
+              <li class="hero-service-item">AI & Computer Vision</li>
+              <li class="hero-service-item underlined">Mobile Applications</li>
+            </ul>
 
-                    <div class="about-meta">
-                        <div class="meta-pill"><b>Location</b><div style="color:var(--muted);margin-top:6px">Jajpur, Odisha</div></div>
-                        <div class="meta-pill"><b>Focus</b><div style="color:var(--muted);margin-top:6px">Responsive UI • Clean Code</div></div>
-                    </div>
+            <p class="hero-intro-text">
+              I craft timeless digital solutions and resilient software architectures that bridge engineering rigor with practical entrepreneurial impact.
+            </p>
 
-                    <div style="margin-top:18px;">
-                        <b style="display:block;margin-bottom:10px;">Education</b>
-                        <div class="timeline" style="padding-left:0;">
-                            <div class="timeline-step" style="margin:0 0 12px 0;">
-                                <h4>B.Tech / Computer Science Student</h4>
-                                <p>Current learning & project-driven development</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="margin-top:18px;display:flex;gap:14px;flex-wrap:wrap;">
-                        <a class="btn btn-primary" href="Resume/Om%20Prakash%20Sethy.pdf" target="_blank" rel="noopener">Download Resume</a>
-                        <a class="btn" href="https://wa.me/8338072738" target="_blank" rel="noopener">Let’s Talk</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Unique Journey Section -->
-    <section id="journey" class="journey-section">
-        <div class="section-inner">
-            <h2>My Journey</h2>
-            <div class="journey-timeline">
-                <div class="journey-item" data-reveal>
-                    <div class="journey-marker"></div>
-                    <div class="journey-content">
-                        <h3>🎓 Started Learning Code</h3>
-                        <p class="journey-year">2020</p>
-                        <p>Began my journey into web development and programming with foundational courses and tutorials.</p>
-                    </div>
-                </div>
-                <div class="journey-item" data-reveal>
-                    <div class="journey-marker"></div>
-                    <div class="journey-content">
-                        <h3>📚 Certifications & Growth</h3>
-                        <p class="journey-year">2021-2022</p>
-                        <p>Completed 19 certifications across web development, data science, and cybersecurity domains.</p>
-                    </div>
-                </div>
-                <div class="journey-item" data-reveal>
-                    <div class="journey-marker"></div>
-                    <div class="journey-content">
-                        <h3>🚀 First Projects Launched</h3>
-                        <p class="journey-year">2023</p>
-                        <p>Developed and deployed full-stack projects including blogs, e-commerce, and innovative web apps.</p>
-                    </div>
-                </div>
-                <div class="journey-item" data-reveal>
-                    <div class="journey-marker"></div>
-                    <div class="journey-content">
-                        <h3>💼 Pursuing Degree & Mastery</h3>
-                        <p class="journey-year">2024-Present</p>
-                        <p>Currently pursuing B.Tech in Computer Science while continuously building and shipping projects.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="section-inner">
-            <h2>Skills</h2>
-            <div class="skill-container">
-                <div class="skill-category" data-reveal>
-                    <h3>Frontend</h3>
-
-                    <div class="skill-bar">
-                        <span class="skill-name">HTML5 <small style="color:var(--muted);font-weight:700;">90%</small></span>
-                        <div class="progress"><div class="progress-fill" data-progress="90" style="width:0%"></div></div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <span class="skill-name">CSS3 <small style="color:var(--muted);font-weight:700;">85%</small></span>
-                        <div class="progress"><div class="progress-fill" data-progress="85" style="width:0%"></div></div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <span class="skill-name">JavaScript <small style="color:var(--muted);font-weight:700;">80%</small></span>
-                        <div class="progress"><div class="progress-fill" data-progress="80" style="width:0%"></div></div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <span class="skill-name">React <small style="color:var(--muted);font-weight:700;">72%</small></span>
-                        <div class="progress"><div class="progress-fill" data-progress="72" style="width:0%"></div></div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <span class="skill-name">Bootstrap <small style="color:var(--muted);font-weight:700;">82%</small></span>
-                        <div class="progress"><div class="progress-fill" data-progress="82" style="width:0%"></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-reveal>
-                    <h3>Backend & Tools</h3>
-
-                    <div class="skill-bar">
-                        <span class="skill-name">PHP <small style="color:var(--muted);font-weight:700;">75%</small></span>
-                        <div class="progress"><div class="progress-fill" data-progress="75" style="width:0%"></div></div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <span class="skill-name">MySQL <small style="color:var(--muted);font-weight:700;">82%</small></span>
-                        <div class="progress"><div class="progress-fill" data-progress="82" style="width:0%"></div></div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <span class="skill-name">Git & GitHub <small style="color:var(--muted);font-weight:700;">85%</small></span>
-                        <div class="progress"><div class="progress-fill" data-progress="85" style="width:0%"></div></div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <span class="skill-name">UI/UX Design <small style="color:var(--muted);font-weight:700;">70%</small></span>
-                        <div class="progress"><div class="progress-fill" data-progress="70" style="width:0%"></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="certifications-grid">
-            <a class="cert-card" href="certificate/c%20php%20udemy.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">c php udemy</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/certificate%20(1).pdf" target="_blank" rel="noopener">
-                <div class="cert-title">certificate (1)</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/certificate%20(2).pdf" target="_blank" rel="noopener">
-                <div class="cert-title">certificate (2)</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/certificate%20(3).pdf" target="_blank" rel="noopener">
-                <div class="cert-title">certificate (3)</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/CORE%20JAVA_compressed.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">CORE JAVA_compressed</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Coursera%20CANVA.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Coursera CANVA</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Coursera%20HTML.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Coursera HTML</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Coursera%20MS%20EXCEL.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Coursera MS EXCEL</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Cyber%20Securtity%20TATA.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Cyber Securtity TATA</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/HTML.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">HTML</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Intorduction%20To%20Computer.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Intorduction To Computer</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Intorduction%20To%20Machine%20Learning.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Intorduction To Machine Learning</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/JAVA%20UDEMY.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">JAVA UDEMY</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Machine%20Learning%20Project.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Machine Learning Project</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/OS%20COURSERA.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">OS COURSERA</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Programming%20For%20Every%20Body.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Programming For Every Body</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Python%20Acess%20Web%20Data.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Python Acess Web Data</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/Python%20DS.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">Python DS</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
-            <a class="cert-card" href="certificate/White&Case.pdf" target="_blank" rel="noopener">
-                <div class="cert-title">White&Case</div>
-                <div class="cert-sub">Open PDF</div>
-            </a>
+            <div class="hero-signature-script">Om Prakash Sethy</div>
           </div>
 
-    </section>
-
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                    <span>Blog Platform</span>
-                </div>
-                <div class="project-info">
-                    <h3>Bridges Blog</h3>
-                    <p>A modern blogging platform for publishing and managing articles with a clean and responsive user interface.</p>
-                    <div class="tech-tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Responsive Design</span>
-                    </div>
-                </div>
+          <!-- Middle Column: Center-Stage Rim-Lit Portrait -->
+          <div class="hero-center-column">
+            <div class="portrait-canvas-wrapper">
+              <div class="portrait-velvet-lighting"></div>
+              <div class="portrait-frame-cinematic">
+                <img src="images/hero-portrait.jpg" alt="Om Prakash Sethy" class="portrait-img-element" onerror="this.onerror=null;this.src='images/profile-dark.png';">
+              </div>
             </div>
+          </div>
 
-            <div class="project-card">
-                <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                    <span>E-Commerce</span>
-                </div>
-                <div class="project-info">
-                    <h3>ElectroHub</h3>
-                    <p>An electronics e-commerce website featuring product management, shopping cart functionality, and secure user authentication.</p>
-                    <div class="tech-tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Secure Auth</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                    <span>Full-Stack</span>
-                </div>
-                <div class="project-info">
-                    <h3>Udbhav</h3>
-                    <p>A full-stack web application designed to deliver innovative digital solutions with a focus on usability and performance.</p>
-                    <div class="tech-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Unique Highlights Section -->
-    <section id="highlights" class="highlights-section">
-        <div class="section-inner">
-            <h2>Highlights & Specialties</h2>
-            <div class="highlights-grid">
-                <div class="highlight-card" data-reveal>
-                    <div class="highlight-icon">💡</div>
-                    <h3>Clean Code Philosophy</h3>
-                    <p>Writing maintainable, readable, and efficient code that follows industry best practices.</p>
-                </div>
-                <div class="highlight-card" data-reveal>
-                    <div class="highlight-icon">🎨</div>
-                    <h3>Modern UI/UX Design</h3>
-                    <p>Creating beautiful, intuitive interfaces with smooth animations and responsive layouts.</p>
-                </div>
-                <div class="highlight-card" data-reveal>
-                    <div class="highlight-icon">🚀</div>
-                    <h3>Full-Stack Capabilities</h3>
-                    <p>Building complete solutions from frontend to backend with databases and deployment.</p>
-                </div>
-                <div class="highlight-card" data-reveal>
-                    <div class="highlight-icon">📱</div>
-                    <h3>Mobile Responsive</h3>
-                    <p>All projects are optimized for mobile, tablet, and desktop viewing experiences.</p>
-                </div>
-                <div class="highlight-card" data-reveal>
-                    <div class="highlight-icon">🔒</div>
-                    <h3>Security Focused</h3>
-                    <p>Implementing best security practices to protect data and user information.</p>
-                </div>
-                <div class="highlight-card" data-reveal>
-                    <div class="highlight-icon">⚡</div>
-                    <h3>Performance Optimized</h3>
-                    <p>Optimizing websites for speed and performance to ensure smooth user experiences.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="info-item">
-                    <h3>📧 Email</h3>
-                    <p>omprakashsethy06@gmail.com</p>
-                    <a class="btn" style="margin-top:10px;" href="mailto:omprakashsethy06@gmail.com?subject=Let%E2%80%99s%20Talk&body=Hi%20Om%20Prakash%2C%0A%0A">
-                        Email Me
-                    </a>
-                </div>
-                <div class="info-item">
-                    <h3>📱 Phone</h3>
-                    <p>+91 8338072738</p>
-                    <a class="btn btn-primary" style="margin-top:10px;" href="https://wa.me/8338072738?text=Hi%20Om%20Prakash!%20I%20want%20to%20talk%20about%20your%20services.">
-                        WhatsApp Me
-                    </a>
-                </div>
-                <div class="info-item">
-                    <h3>📍 Location</h3>
-                    <p>Jajpur, Odisha</p>
-                        <a class="btn" href="#" style="margin-top:10px;" aria-label="Location">Jajpur, Odisha</a>
-                </div>
-
-                <div class="social-links">
-                    <h3>Connect With Me</h3>
-                    <div class="social-buttons">
-                        <a href="https://wa.me/8338072738" class="social-btn" target="_blank" rel="noopener">WhatsApp</a>
-                        <a href="mailto:omprakashsethy06@gmail.com" class="social-btn">Email</a>
-                        <a href="https://wa.me/8338072738" class="social-btn" target="_blank" rel="noopener">Twitter</a>
-                        <a href="https://www.linkedin.com/in/om-prakash-sethy-955bb82b8" class="social-btn" target="_blank" rel="noopener">LinkedIn</a>
-                        <a href="https://github.com/thecodergen" class="social-btn" target="_blank" rel="noopener">GitHub</a>
-                        <a href="#" class="social-btn">Portfolio</a>
-                    </div>
-                </div>
-            </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-
-    </section>
-
-    <!-- Floating CTA Button -->
-    <div class="floating-cta">
-        <a href="https://wa.me/8338072738" class="floating-btn" target="_blank" rel="noopener" title="Let's Talk on WhatsApp">
-            <span class="btn-text">Let's Talk</span>
-            <span class="btn-icon">→</span>
-        </a>
-    </div>
-
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Om Prakash Sethy. All rights reserved.</p>
-            <p>Designed & Developed with thecodergen</p>
-        </div>
-    </footer>
-
-    <script>
-        // Hamburger menu functionality
-        const navToggle = document.querySelector('.nav-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Active link highlighting on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
+          <!-- Right Column: Rotating Circular Stamp & Actions -->
+          <div class="hero-right-column">
             
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
+            <!-- Rotating Circular Luxury Seal: Designing Purpose • Building Legacy -->
+            <div class="circular-stamp-badge" aria-label="Designing Purpose • Building Legacy">
+              <div class="stamp-glow-underlay"></div>
+              <svg class="stamp-rotating-svg" viewBox="0 0 100 100">
+                <defs>
+                  <path id="badge-circle-path" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+                  <linearGradient id="gold-stamp-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F2DFB8"/>
+                    <stop offset="50%" stop-color="#D4B07A"/>
+                    <stop offset="100%" stop-color="#A57D42"/>
+                  </linearGradient>
+                </defs>
+                <text font-family="'Montserrat', 'Jost', sans-serif" font-size="7.2" font-weight="600" fill="url(#gold-stamp-gradient)" letter-spacing="2.6">
+                  <textPath href="#badge-circle-path" startOffset="0%">
+                    • DESIGNING PURPOSE • BUILDING LEGACY
+                  </textPath>
+                </text>
+              </svg>
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href')?.slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
+              <!-- Bespoke Four-Point Luxury Emblem with Orbital Point -->
+              <div class="stamp-center-star">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <!-- Four-Point Curved Sparkle Star -->
+                  <path d="M17 2 C17 11 23 17 32 17 C23 17 17 23 17 32 C17 23 11 17 2 17 C11 17 17 11 17 2 Z" 
+                        fill="none" 
+                        stroke="url(#gold-stamp-gradient)" 
+                        stroke-width="1.6" 
+                        stroke-linejoin="round"/>
+                  <!-- Orbital Accent Dot -->
+                  <circle cx="10" cy="24" r="1.6" fill="#D4B07A" />
+                  <!-- Mini Spark Cross -->
+                  <path d="M26 8 L26 12 M24 10 L28 10" stroke="#F2DFB8" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
 
-        // Loading animation
-        const loader = document.getElementById('page-loader');
-        window.addEventListener('load', () => {
-            if (!loader) return;
-            loader.classList.add('loaded');
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 600);
-        });
+            <div class="hero-actions-group">
+              <a href="Resume/Om_Prakash_Sethy_Resume-v1.pdf" target="_blank" rel="noopener noreferrer" class="btn-gold-editorial" title="View Resume in Browser">
+                <span>View Resume</span>
+                <i data-lucide="eye" style="width: 15px; height: 15px;"></i>
+              </a>
+              <a href="#featured-work" class="btn-outline-editorial">
+                <span>Explore Projects</span>
+                <i data-lucide="arrow-down" style="width: 14px; height: 14px;"></i>
+              </a>
+            </div>
 
-        // Typing effect
-        const typingEl = document.getElementById('typing');
-        if (typingEl) {
-            const phrases = [
-                'Full Stack Developer',
-                'Web Designer',
-                'Computer Science Student'
-            ];
-            let phraseIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const typeSpeed = 65;
-            const deleteSpeed = 35;
-            const pauseTime = 900;
+            <div class="hero-social-pills-row">
+              <a href="https://github.com/thecodergen" target="_blank" rel="noopener noreferrer" class="hero-social-link-icon" aria-label="GitHub Profile" title="GitHub">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/omprakashsethy" target="_blank" rel="noopener noreferrer" class="hero-social-link-icon" aria-label="LinkedIn Profile" title="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+              <a href="mailto:dev.somprakash@gmail.com" class="hero-social-link-icon" aria-label="Send Email" title="Email">
+                <i data-lucide="mail" style="width: 15px; height: 15px;"></i>
+              </a>
+            </div>
 
-            function tick() {
-                const current = phrases[phraseIndex];
+          </div>
 
-                if (!isDeleting) {
-                    charIndex++;
-                    typingEl.textContent = current.slice(0, charIndex);
-                    if (charIndex >= current.length) {
-                        isDeleting = true;
-                        setTimeout(tick, pauseTime);
-                        return;
-                    }
-                    setTimeout(tick, typeSpeed);
-                } else {
-                    charIndex--;
-                    typingEl.textContent = current.slice(0, charIndex);
-                    if (charIndex <= 0) {
-                        isDeleting = false;
-                        phraseIndex = (phraseIndex + 1) % phrases.length;
-                        setTimeout(tick, typeSpeed);
-                        return;
-                    }
-                    setTimeout(tick, deleteSpeed);
-                }
-            }
-            tick();
-        }
+        </div>
 
-        // Particles background (canvas)
-        const canvas = document.getElementById('particles-canvas');
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
-            let w, h;
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
-            const particles = [];
-            const settings = {
-                count: 70,
-                speed: 0.22,
-                linkDist: 130,
-            };
+        <!-- Massive Gold "PORTFOLIO" Headline Overlapping Bottom -->
+        <div class="hero-giant-title-row">
+          <h1 class="hero-oversized-title text-gold-gradient">PORTFOLIO</h1>
+          <div class="hero-subline-identity">Software Developer | Full-Stack Developer | AI/ML Enthusiast</div>
+          <div class="hero-tagline-statement">"Building meaningful digital solutions through code, creativity, and innovation."</div>
+        </div>
 
-            function resize() {
-                w = canvas.clientWidth;
-                h = canvas.clientHeight;
-                canvas.width = Math.floor(w * dpr);
-                canvas.height = Math.floor(h * dpr);
-                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-            }
+      </div>
+    </section>
 
-            function rand(min, max) {
-                return Math.random() * (max - min) + min;
-            }
+    <!-- =============================================================================
+         2. VISION BAND (EMERALD STRIP)
+         ============================================================================= -->
+    <section id="vision" class="ops-vision-section">
+      <div class="container vision-grid-layout">
+        
+        <div class="vision-heading-panel">
+          <h2 class="vision-heading-text">
+            Vision<br>
+            That Drives<br>
+            <span class="italic-gold">Excellence</span>
+          </h2>
+        </div>
 
-            function init() {
-                particles.length = 0;
-                const count = Math.floor(settings.count * Math.min(1.1, w / 1200));
-                for (let i = 0; i < count; i++) {
-                    particles.push({
-                        x: rand(0, w),
-                        y: rand(0, h),
-                        r: rand(1.2, 2.6),
-                        vx: rand(-settings.speed, settings.speed),
-                        vy: rand(-settings.speed, settings.speed),
-                    });
-                }
-            }
+        <div class="vision-pillars-container">
+          
+          <div class="vision-pillar-box reveal delay-1">
+            <div class="vision-line-icon">
+              <i data-lucide="layers"></i>
+            </div>
+            <h3 class="vision-pillar-title">Full-Stack Development</h3>
+            <p class="vision-pillar-desc">
+              Architecting responsive, high-throughput digital platforms across mobile and web interfaces.
+            </p>
+          </div>
 
-            function draw() {
-                ctx.clearRect(0, 0, w, h);
+          <div class="vision-pillar-box reveal delay-2">
+            <div class="vision-line-icon">
+              <i data-lucide="cpu"></i>
+            </div>
+            <h3 class="vision-pillar-title">.NET & Backend</h3>
+            <p class="vision-pillar-desc">
+              Designing resilient ASP.NET Core Web APIs, real-time SignalR sockets, and relational data schemas.
+            </p>
+          </div>
 
-                for (const p of particles) {
-                    p.x += p.vx;
-                    p.y += p.vy;
+          <div class="vision-pillar-box reveal delay-3">
+            <div class="vision-line-icon">
+              <i data-lucide="eye"></i>
+            </div>
+            <h3 class="vision-pillar-title">AI/ML & Vision</h3>
+            <p class="vision-pillar-desc">
+              Transforming raw video feeds with MediaPipe Face Mesh, OpenCV, and CNN edge analytics.
+            </p>
+          </div>
 
-                    if (p.x < -10) p.x = w + 10;
-                    if (p.x > w + 10) p.x = -10;
-                    if (p.y < -10) p.y = h + 10;
-                    if (p.y > h + 10) p.y = -10;
+          <div class="vision-pillar-box reveal delay-4">
+            <div class="vision-line-icon">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="vision-pillar-title">Mobile Apps</h3>
+            <p class="vision-pillar-desc">
+              Engineering fluid cross-platform experiences using React Native, Expo, and offline-first workflows.
+            </p>
+          </div>
 
-                    ctx.beginPath();
-                    ctx.fillStyle = 'rgba(0, 217, 255, 0.85)';
-                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-                    ctx.fill();
-                }
+        </div>
 
-                // links
-                for (let i = 0; i < particles.length; i++) {
-                    for (let j = i + 1; j < particles.length; j++) {
-                        const a = particles[i];
-                        const b = particles[j];
-                        const dx = a.x - b.x;
-                        const dy = a.y - b.y;
-                        const dist = Math.hypot(dx, dy);
-                        if (dist < settings.linkDist) {
-                            const alpha = (1 - dist / settings.linkDist) * 0.55;
-                            ctx.strokeStyle = `rgba(0, 217, 255, ${alpha})`;
-                            ctx.lineWidth = 1;
-                            ctx.beginPath();
-                            ctx.moveTo(a.x, a.y);
-                            ctx.lineTo(b.x, b.y);
-                            ctx.stroke();
-                        }
-                    }
-                }
+      </div>
+    </section>
 
-                requestAnimationFrame(draw);
-            }
+    <!-- =============================================================================
+         3. ABOUT ME SECTION
+         ============================================================================= -->
+    <section id="about" class="ops-about-section">
+      <div class="container">
+        
+        <div class="section-editorial-divider-bar">
+          <div class="divider-title-left">About Om Prakash Sethy</div>
+          <div class="divider-title-right">Location: Jajpur, Odisha, India</div>
+        </div>
 
-            resize();
-            init();
-            window.addEventListener('resize', () => {
-                resize();
-                init();
-            });
-            draw();
-        }
+        <div class="about-editorial-grid">
+          <div class="about-text-content">
+            <p class="about-main-paragraph">
+              I am a Computer Science Engineering student, software developer, and aspiring entrepreneur from Odisha, India.
+            </p>
+            <p class="about-main-paragraph">
+              I enjoy building real-world software solutions, exploring emerging technologies, and solving practical problems through programming.
+            </p>
+            <p class="about-main-paragraph">
+              My interests include full-stack development, .NET technologies, artificial intelligence, machine learning, mobile application development, database management, and cloud technologies.
+            </p>
+            <p class="about-main-paragraph">
+              I am also interested in entrepreneurship and building technology-based products. I believe in learning by building real projects rather than limiting myself to theoretical knowledge.
+            </p>
+            <p class="about-main-paragraph">
+              My long-term goal is to become a skilled software engineer and build successful technology products.
+            </p>
 
-        // Scroll reveal (IntersectionObserver)
-        const reveal = document.querySelectorAll('[data-reveal]');
-        const observer = new IntersectionObserver((entries) => {
-            for (const entry of entries) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    observer.unobserve(entry.target);
-                }
-            }
-        }, { threshold: 0.15 });
+            <div class="about-credentials-highlight">
+              <div class="about-cred-item">Current Education:</div>
+              <div class="about-cred-sub">B.Tech in Computer Science and Engineering, BPUT CUPGS, Rourkela (Expected Graduation: 2028)</div>
+            </div>
+          </div>
 
-        reveal.forEach(el => observer.observe(el));
+          <div class="about-portrait-card">
+            <img src="images/hero-portrait.jpg" alt="Om Prakash Sethy in studio" onerror="this.onerror=null;this.src='images/profile-dark.png';">
+          </div>
+        </div>
 
-        // Skills progress animation
-        const skillBars = document.querySelectorAll('.progress-fill[data-progress]');
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                const el = entry.target;
-                const target = el.getAttribute('data-progress');
-                el.style.width = target + '%';
-                skillObserver.unobserve(el);
-            });
-        }, { threshold: 0.35 });
-        skillBars.forEach(el => skillObserver.observe(el));
+      </div>
+    </section>
 
-        // Animated counters
-        const counters = document.querySelectorAll('.counter[data-target]');
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                const el = entry.target;
-                const target = parseFloat(el.getAttribute('data-target'));
-                const suffix = el.getAttribute('data-suffix') || '';
-                const duration = 1100;
-                const start = performance.now();
+    <!-- =============================================================================
+         4. TECHNICAL SKILLS SECTION (NO BARS, PURE EDITORIAL CATEGORIES)
+         ============================================================================= -->
+    <section id="skills" class="ops-skills-section">
+      <div class="container">
+        
+        <div class="section-editorial-divider-bar">
+          <div class="divider-title-left">Technical Competence</div>
+          <div class="divider-title-right">Core Disciplines</div>
+        </div>
 
-                function animate(now) {
-                    const t = Math.min(1, (now - start) / duration);
-                    const value = Math.round(target * (t * (2 - t))); // easeOutQuad
-                    el.textContent = value + suffix;
-                    if (t < 1) requestAnimationFrame(animate);
-                }
+        <div class="skills-note-banner">
+          Technologies I have learned, explored, or worked with
+        </div>
 
-                requestAnimationFrame(animate);
-                counterObserver.unobserve(el);
-            });
-        }, { threshold: 0.25 });
-        counters.forEach(el => counterObserver.observe(el));
+        <div class="skills-categories-grid" id="skills-categories-grid">
+          <!-- Rendered dynamically from config -->
+        </div>
 
-        // Experience timeline animation (highlight active step)
-        const timeline = document.querySelector('.timeline');
-        if (timeline) {
-            const steps = timeline.querySelectorAll('.timeline-step');
-            const tlObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        steps.forEach(s => s.classList.remove('active'));
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, { threshold: 0.4 });
-            steps.forEach(s => tlObserver.observe(s));
-        }
+      </div>
+    </section>
 
-        // Back to top
-        const backToTop = document.getElementById('back-to-top');
-        if (backToTop) {
-            const onScroll = () => {
-                backToTop.classList.toggle('show', window.scrollY > 700);
-            };
-            window.addEventListener('scroll', onScroll);
-            onScroll();
-            backToTop.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
+    <!-- =============================================================================
+         5. FEATURED WORK (4-COLUMN GRID, "+" TRIGGER & DETAIL MODAL)
+         ============================================================================= -->
+    <section id="featured-work" class="ops-featured-work-section">
+      <div class="container">
+        
+        <div class="section-editorial-divider-bar">
+          <div class="divider-title-left">Featured Work</div>
+          <div class="divider-title-right">Selected Projects • Click to Expand</div>
+        </div>
 
-        // Profile views (total + unique) using Netlify Function
-        (async function loadProfileViews() {
-            try {
-                const res = await fetch('/.netlify/functions/profile-views', { method: 'POST' });
-                if (!res.ok) return;
-                const data = await res.json();
+        <div class="featured-projects-grid" id="featured-projects-grid">
+          <!-- Rendered dynamically from config -->
+        </div>
 
-                const totalEl = document.getElementById('profile-total-views');
-                const uniqueEl = document.getElementById('profile-unique-visitors');
-                if (totalEl) {
-                    totalEl.textContent = data.totalViews ?? '0';
-                }
-                if (uniqueEl) {
-                    uniqueEl.textContent = data.uniqueVisitors ?? '0';
-                }
-            } catch (e) {
-                // silently ignore
-            }
-        })();
+      </div>
+    </section>
 
-        // Contact form (client-side) -> opens WhatsApp with prefilled message
-        const form = document.querySelector('.contact-form');
+    <!-- =============================================================================
+         6. INTERNSHIP & CERTIFICATION (5-SECOND ANIMATED CAROUSEL)
+         ============================================================================= -->
+    <section id="experience" class="ops-experience-section">
+      <div class="container">
+        
+        <div class="section-editorial-divider-bar">
+          <div class="divider-title-left">Internship & Certification</div>
+          <div class="divider-title-right">Verified Credentials & Applied Experience</div>
+        </div>
 
-        if (form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
+        <div class="internship-carousel-card" id="internship-carousel-container">
+          <!-- 5-Second Animated Countdown Hairline Bar -->
+          <div class="carousel-countdown-track">
+            <div id="carousel-countdown-fill" class="carousel-countdown-fill"></div>
+          </div>
 
-                const name = form.querySelector('input[type="text"]')?.value?.trim();
-                const email = form.querySelector('input[type="email"]')?.value?.trim();
-                const message = form.querySelector('textarea')?.value?.trim();
+          <!-- Carousel Tabs & Controls Header -->
+          <div class="carousel-nav-tabs-bar">
+            <div class="carousel-tab-buttons">
+              <button class="carousel-tab-btn active" data-slide-index="0">
+                <span class="tab-index-badge">01</span>
+                <span>AI & Vision</span>
+              </button>
+              <button class="carousel-tab-btn" data-slide-index="1">
+                <span class="tab-index-badge">02</span>
+                <span>Java Core</span>
+              </button>
+              <button class="carousel-tab-btn" data-slide-index="2">
+                <span class="tab-index-badge">03</span>
+                <span>Hardware</span>
+              </button>
+              <button class="carousel-tab-btn" data-slide-index="3">
+                <span class="tab-index-badge">04</span>
+                <span>AI / ML</span>
+              </button>
+              <button class="carousel-tab-btn" data-slide-index="4">
+                <span class="tab-index-badge">05</span>
+                <span>Python</span>
+              </button>
+              <button class="carousel-tab-btn" data-slide-index="5">
+                <span class="tab-index-badge">06</span>
+                <span>Security</span>
+              </button>
+              <button class="carousel-tab-btn" data-slide-index="6">
+                <span class="tab-index-badge">07</span>
+                <span>Web & Markets</span>
+              </button>
+            </div>
 
-                if (!name || !email || !message) {
-                    alert('Please fill all fields.');
-                    return;
-                }
+            <div class="carousel-controls-right">
+              <button id="carousel-prev-btn" class="carousel-arrow-btn" aria-label="Previous Slide">
+                <i data-lucide="chevron-left" style="width: 14px; height: 14px;"></i>
+              </button>
+              <button id="carousel-next-btn" class="carousel-arrow-btn" aria-label="Next Slide">
+                <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i>
+              </button>
+            </div>
+          </div>
 
-                const phone = '8338072738';
-                const text = `Hi Om Prakash!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
-                const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+          <!-- Carousel Slides Viewport -->
+          <div class="carousel-slides-viewport">
+            
+            <!-- SLIDE 1: AI / MACHINE LEARNING INTERNSHIP -->
+            <div class="internship-slide active" data-slide="0">
+              <div class="exp-header-row">
+                <div>
+                  <h3 class="exp-institution-name">CTTC (Central Tool Room & Training Centre) Bhubaneswar</h3>
+                  <div class="exp-role-title">AI / Machine Learning Intern • Bhubaneswar, Odisha</div>
+                </div>
+                <span class="exp-project-badge">Project: AI Driver Drowsiness Detection</span>
+              </div>
 
-                // Open WhatsApp
-                window.open(waUrl, '_blank', 'noopener');
+              <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px;">
+                Conducted hands-on research and applied engineering in Computer Vision and Deep Learning. Focused on processing live video feeds in real-time, extracting biometric facial markers, and training convolutional neural models to assess operator alertness under variable cabin illumination.
+              </p>
 
-                // Reset form
-                form.reset();
-            });
-        }
+              <div style="font-family: var(--font-sans-label); font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold-primary); margin-bottom: 12px;">
+                Core Computer Vision Techniques & Practical Learning:
+              </div>
 
-    </script>
+              <ul class="exp-learnings-list">
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Calculated Eye Aspect Ratio (EAR) and Mouth Aspect Ratio (MAR) metrics to detect micro-sleep patterns and yawn frequency.</span>
+                </li>
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Implemented 468-point 3D facial landmark detection and head pose estimation using Google MediaPipe Face Mesh.</span>
+                </li>
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Engineered real-time OpenCV image transformation pipelines (grayscale, histogram equalization, thresholding).</span>
+                </li>
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Constructed Convolutional Neural Network (CNN) architectures for facial feature classification.</span>
+                </li>
+              </ul>
+
+              <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+                <a href="certificate/Machine Learning Project.pdf" target="_blank" class="btn-outline-editorial">
+                  <i data-lucide="award" style="width: 15px; height: 15px;"></i>
+                  <span>View CTTC Project Certificate ↗</span>
+                </a>
+                <a href="certificate/Intorduction To Machine Learning.pdf" target="_blank" class="btn-outline-editorial">
+                  <i data-lucide="award" style="width: 15px; height: 15px;"></i>
+                  <span>Introduction to ML Certificate ↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- SLIDE 2: JAVA PROGRAMMING INTERNSHIP -->
+            <div class="internship-slide" data-slide="1">
+              <div class="exp-header-row">
+                <div>
+                  <h3 class="exp-institution-name">CTTC (Central Tool Room & Training Centre) Bhubaneswar</h3>
+                  <div class="exp-role-title">Core Java Programming Intern • Bhubaneswar, Odisha</div>
+                </div>
+                <span class="exp-project-badge">Enterprise Object-Oriented Engineering</span>
+              </div>
+
+              <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px;">
+                Practiced core Java programming, object-oriented design patterns (OOP), exception handling architectures, and application logic development. Gained hands-on proficiency in building structured, scalable backends and enterprise software services.
+              </p>
+
+              <div style="font-family: var(--font-sans-label); font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold-primary); margin-bottom: 12px;">
+                Core Java Competencies & Hands-on Implementation:
+              </div>
+
+              <ul class="exp-learnings-list">
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Mastered Object-Oriented Principles: Encapsulation, Polymorphism, Abstraction, and Inheritance models.</span>
+                </li>
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Implemented structured Exception Handling, Custom Exception hierarchies, and file I/O streams.</span>
+                </li>
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Utilized the Java Collections Framework (ArrayList, HashMap, LinkedList, TreeSets) for algorithmic data storage.</span>
+                </li>
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Developed multi-threaded applications and synchronized background execution pipelines.</span>
+                </li>
+              </ul>
+
+              <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+                <a href="certificate/CORE JAVA_compressed.pdf" target="_blank" class="btn-outline-editorial">
+                  <i data-lucide="award" style="width: 15px; height: 15px;"></i>
+                  <span>View Core Java Certificate ↗</span>
+                </a>
+                <a href="certificate/JAVA UDEMY.pdf" target="_blank" class="btn-outline-editorial">
+                  <i data-lucide="award" style="width: 15px; height: 15px;"></i>
+                  <span>Java Udemy Specialization ↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- SLIDE 3: COMPUTER HARDWARE & NETWORKING INTERNSHIP -->
+            <div class="internship-slide" data-slide="2">
+              <div class="exp-header-row">
+                <div>
+                  <h3 class="exp-institution-name">CTTC (Central Tool Room & Training Centre) Bhubaneswar</h3>
+                  <div class="exp-role-title">Computer Hardware & Networking Intern • Bhubaneswar, Odisha</div>
+                </div>
+                <span class="exp-project-badge">Systems Architecture & Infrastructure</span>
+              </div>
+
+              <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px;">
+                Completed intensive hands-on technical training in computer hardware assembly, BIOS diagnostics, operating systems installation, workstation troubleshooting, IP configuration, and local area network (LAN/WAN) deployment.
+              </p>
+
+              <div style="font-family: var(--font-sans-label); font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold-primary); margin-bottom: 12px;">
+                Practical Engineering Skills & Hardware Lab Diagnostics:
+              </div>
+
+              <ul class="exp-learnings-list">
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Comprehensive PC assembly, processor seating, thermal paste management, and motherboard component diagnosis.</span>
+                </li>
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Hardware fault isolation: POST codes, RAM test diagnostics, power supply testing, and BIOS/UEFI configuration.</span>
+                </li>
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Local Area Network (LAN) design, RJ45 crimping, CAT6 cabling, router/switch setups, and IPv4/IPv6 subnetting.</span>
+                </li>
+                <li class="exp-learning-item">
+                  <span class="exp-learning-star">✦</span>
+                  <span>Operating system deployment, disk partitioning, RAID fundamentals, and network security diagnostics.</span>
+                </li>
+              </ul>
+
+              <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+                <a href="certificate/OS COURSERA.pdf" target="_blank" class="btn-outline-editorial">
+                  <i data-lucide="award" style="width: 15px; height: 15px;"></i>
+                  <span>Operating Systems Certificate ↗</span>
+                </a>
+                <a href="certificate/Cyber Securtity TATA.pdf" target="_blank" class="btn-outline-editorial">
+                  <i data-lucide="award" style="width: 15px; height: 15px;"></i>
+                  <span>Cyber Security Certificate ↗</span>
+                </a>
+                <a href="certificate/Intorduction To Computer.pdf" target="_blank" class="btn-outline-editorial">
+                  <i data-lucide="award" style="width: 15px; height: 15px;"></i>
+                  <span>Computer Systems Certificate ↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- SLIDE 4: AI & MACHINE LEARNING CERTIFICATIONS -->
+            <div class="internship-slide" data-slide="3">
+              <div class="exp-header-row">
+                <div>
+                  <h3 class="exp-institution-name">Artificial Intelligence & Machine Learning Specializations</h3>
+                  <div class="exp-role-title">Duke University & HP LIFE • Professional Credentials</div>
+                </div>
+                <span class="exp-project-badge">4 Certified Specializations</span>
+              </div>
+
+              <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px;">
+                Advanced theoretical and applied certifications in Artificial Intelligence, predictive data science, and managing ML engineering life-cycles from globally recognized universities and industrial foundations.
+              </p>
+
+              <div class="carousel-inner-cert-grid">
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Duke University</span>
+                    <span class="mini-card-date">Mar 2026</span>
+                  </div>
+                  <h4 class="mini-card-title">Managing Machine Learning Projects</h4>
+                  <p class="mini-card-desc">Machine Learning project life cycle, evaluation metrics, pipeline architecture, and team workflows.</p>
+                  <a href="certificate/Machine Learning Project.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Duke University</span>
+                    <span class="mini-card-date">Mar 2026</span>
+                  </div>
+                  <h4 class="mini-card-title">Introduction to Machine Learning</h4>
+                  <p class="mini-card-desc">Supervised and unsupervised models, gradient descent, loss functions, classification, and regression.</p>
+                  <a href="certificate/Intorduction To Machine Learning.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">HP LIFE</span>
+                    <span class="mini-card-date">Certified</span>
+                  </div>
+                  <h4 class="mini-card-title">AI for Beginners</h4>
+                  <p class="mini-card-desc">Fundamental concepts of artificial intelligence, real-world vertical solutions, and automation impact.</p>
+                  <a href="certificate/certificate (2).pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">HP LIFE</span>
+                    <span class="mini-card-date">Certified</span>
+                  </div>
+                  <h4 class="mini-card-title">Data Science & Analytics</h4>
+                  <p class="mini-card-desc">Data analysis frameworks, data visualization techniques, quantitative modeling, and insights.</p>
+                  <a href="certificate/certificate (3).pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 5: PYTHON, C & WEB CERTIFICATIONS -->
+            <div class="internship-slide" data-slide="4">
+              <div class="exp-header-row">
+                <div>
+                  <h3 class="exp-institution-name">Python & Core Software Development</h3>
+                  <div class="exp-role-title">University of Michigan, Coursera & Udemy • Specialized Credentials</div>
+                </div>
+                <span class="exp-project-badge">4 Certified Specializations</span>
+              </div>
+
+              <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px;">
+                Comprehensive programming curriculum covering algorithmic data structures, web data scraping, REST APIs, and foundational language proficiency in Python, C, and PHP.
+              </p>
+
+              <div class="carousel-inner-cert-grid">
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Univ. of Michigan</span>
+                    <span class="mini-card-date">Dec 2025</span>
+                  </div>
+                  <h4 class="mini-card-title">Programming for Everybody (Python)</h4>
+                  <p class="mini-card-desc">Algorithmic foundations, variable scopes, conditional branching, and procedural function design.</p>
+                  <a href="certificate/Programming For Every Body.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Univ. of Michigan</span>
+                    <span class="mini-card-date">Dec 2025</span>
+                  </div>
+                  <h4 class="mini-card-title">Python Data Structures</h4>
+                  <p class="mini-card-desc">Dictionaries, lists, nested tuple indexing, file parsing, and memory-efficient algorithmic logic.</p>
+                  <a href="certificate/Python DS.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Univ. of Michigan</span>
+                    <span class="mini-card-date">Jan 2026</span>
+                  </div>
+                  <h4 class="mini-card-title">Using Python to Access Web Data</h4>
+                  <p class="mini-card-desc">HTTP socket communication, BeautifulSoup scraping, XML/JSON parsing, and RESTful APIs.</p>
+                  <a href="certificate/Python Acess Web Data.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Udemy Certified</span>
+                    <span class="mini-card-date">Jan 2026</span>
+                  </div>
+                  <h4 class="mini-card-title">C & PHP Programming Masterclass</h4>
+                  <p class="mini-card-desc">Pointers, memory management in C alongside server-side scripting and form processing in PHP.</p>
+                  <a href="certificate/c php udemy.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 6: SYSTEMS & CYBERSECURITY CERTIFICATIONS -->
+            <div class="internship-slide" data-slide="5">
+              <div class="exp-header-row">
+                <div>
+                  <h3 class="exp-institution-name">Systems, Hardware & Enterprise Cybersecurity</h3>
+                  <div class="exp-role-title">TATA, Microsoft, Akamai & HP LIFE • Professional Simulation & Courses</div>
+                </div>
+                <span class="exp-project-badge">4 Certified Specializations</span>
+              </div>
+
+              <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px;">
+                Operating system internals, computer architecture, enterprise access management (IAM), and security threat mitigation validated by industry leaders.
+              </p>
+
+              <div class="carousel-inner-cert-grid">
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">TATA Group</span>
+                    <span class="mini-card-date">Jan 2025</span>
+                  </div>
+                  <h4 class="mini-card-title">Cybersecurity Analyst Job Simulation</h4>
+                  <p class="mini-card-desc">Identity & Access Management (IAM), security assessment matrices, and enterprise defense design.</p>
+                  <a href="certificate/Cyber Securtity TATA.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Akamai Academy</span>
+                    <span class="mini-card-date">Jan 2026</span>
+                  </div>
+                  <h4 class="mini-card-title">Operating Systems Fundamentals</h4>
+                  <p class="mini-card-desc">Kernel processes, multithreading synchronization, CPU scheduling, and virtual memory pagination.</p>
+                  <a href="certificate/OS COURSERA.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Microsoft</span>
+                    <span class="mini-card-date">Jan 2026</span>
+                  </div>
+                  <h4 class="mini-card-title">Introduction to Computers & Hardware</h4>
+                  <p class="mini-card-desc">Hardware component architecture, memory hierarchies, CPU logic units, and workstation setup.</p>
+                  <a href="certificate/Intorduction To Computer.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">HP LIFE</span>
+                    <span class="mini-card-date">Certified</span>
+                  </div>
+                  <h4 class="mini-card-title">Cybersecurity Awareness & Protection</h4>
+                  <p class="mini-card-desc">Defensive measures against phishing, social engineering, credential security, and network hygiene.</p>
+                  <a href="certificate/certificate (1).pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 7: WEB DESIGN & BUSINESS SIMULATION -->
+            <div class="internship-slide" data-slide="6">
+              <div class="exp-header-row">
+                <div>
+                  <h3 class="exp-institution-name">Web Engineering, Design & Financial Operations</h3>
+                  <div class="exp-role-title">Coursera Project Network & White & Case • Applied Learning</div>
+                </div>
+                <span class="exp-project-badge">5 Applied Credentials</span>
+              </div>
+
+              <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 20px;">
+                Practical applied projects in frontend semantics, design thinking, analytical spreadsheets, and international capital markets transactional workflows.
+              </p>
+
+              <div class="carousel-inner-cert-grid">
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Coursera Project</span>
+                    <span class="mini-card-date">Jun 2025</span>
+                  </div>
+                  <h4 class="mini-card-title">HTML Web Development Project</h4>
+                  <p class="mini-card-desc">Semantic HTML5 page structuring, accessibility markup, and responsive viewport standards.</p>
+                  <a href="certificate/Coursera HTML.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Coursera Project</span>
+                    <span class="mini-card-date">Jun 2025</span>
+                  </div>
+                  <h4 class="mini-card-title">Introduction to HTML5 Fundamentals</h4>
+                  <p class="mini-card-desc">Core web page layout, input forms, hyperlink architecture, and DOM elements organization.</p>
+                  <a href="certificate/HTML.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Coursera Project</span>
+                    <span class="mini-card-date">Jun 2025</span>
+                  </div>
+                  <h4 class="mini-card-title">Graphic Design with Canva</h4>
+                  <p class="mini-card-desc">Typography, visual hierarchy, color palette matching, and editorial presentation assets.</p>
+                  <a href="certificate/Coursera CANVA.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">Coursera Project</span>
+                    <span class="mini-card-date">Jun 2025</span>
+                  </div>
+                  <h4 class="mini-card-title">Microsoft Excel for Data Analysis</h4>
+                  <p class="mini-card-desc">Formulas, spreadsheet modeling, pivot tables, statistical metrics, and charts.</p>
+                  <a href="certificate/Coursera MS EXCEL.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+
+                <div class="carousel-cert-mini-card">
+                  <div class="mini-card-head">
+                    <span class="mini-card-badge">White & Case</span>
+                    <span class="mini-card-date">Mar 2025</span>
+                  </div>
+                  <h4 class="mini-card-title">US Capital Markets Job Simulation</h4>
+                  <p class="mini-card-desc">Managing closing checklists, transactional certificate drafting, and compliance review.</p>
+                  <a href="certificate/White&Case.pdf" target="_blank" class="mini-card-link">View Certificate PDF ↗</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================================================
+         7. EDUCATION SECTION (CHRONOLOGICAL TIMELINE)
+         ============================================================================= -->
+    <section id="education" class="ops-education-section">
+      <div class="container">
+        
+        <div class="section-editorial-divider-bar">
+          <div class="divider-title-left">Academic Background</div>
+          <div class="divider-title-right">Continuous Progression</div>
+        </div>
+
+        <div class="education-timeline-grid" id="education-timeline-grid">
+          <!-- Rendered dynamically from config -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================================================
+         8. BEYOND CODING (LEADERSHIP & CULTURAL IMPACT)
+         ============================================================================= -->
+    <section id="beyond-coding" class="ops-beyond-coding-section">
+      <div class="container">
+        
+        <div class="section-editorial-divider-bar">
+          <div class="divider-title-left">Beyond Coding</div>
+          <div class="divider-title-right">Leadership & Creative Direction</div>
+        </div>
+
+        <div class="leadership-two-col" id="leadership-two-col">
+          <!-- Rendered dynamically from config -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================================================
+         9. MY STARTUP JOURNEY (FOUNDER SPOTLIGHT)
+         ============================================================================= -->
+    <section id="startup" class="ops-startup-section">
+      <div class="container">
+        
+        <div class="section-editorial-divider-bar">
+          <div class="divider-title-left">My Startup Journey</div>
+          <div class="divider-title-right">QuickHelper • Founder Perspective</div>
+        </div>
+
+        <div class="startup-split-testimonial">
+          <div class="startup-left-quote">
+            <div class="quote-giant-glyph">“</div>
+            <p class="startup-quote-text">
+              I observed firsthand the immense friction families in tier-2 and tier-3 towns face when trying to find reliable technicians. At the same time, skilled tradespeople struggle for steady work without paying unfair commissions. QuickHelper was founded to solve this divide with clean technology and transparent real-time connections.
+            </p>
+            <div class="startup-author-row">— Om Prakash Sethy, Founder & Full-Stack Developer</div>
+          </div>
+
+          <div class="startup-right-pillars">
+            <div class="startup-pillar-row">
+              <span class="pillar-row-tag">The Problem</span>
+              <span class="pillar-row-desc">Fragmented service directories, unpredictable pricing, zero technician background checks, and painful delays.</span>
+            </div>
+            <div class="startup-pillar-row">
+              <span class="pillar-row-tag">The Solution</span>
+              <span class="pillar-row-desc">A verified hyperlocal marketplace connecting clients with nearby professionals within minutes via GPS and SignalR real-time chat.</span>
+            </div>
+            <div class="startup-pillar-row">
+              <span class="pillar-row-tag">The Architecture</span>
+              <span class="pillar-row-desc">Cross-platform React Native client backed by high-throughput ASP.NET Core 9 Web APIs and PostgreSQL.</span>
+            </div>
+            <div class="startup-pillar-row">
+              <span class="pillar-row-tag">The Vision</span>
+              <span class="pillar-row-desc">Empowering micro-entrepreneurs and skilled technicians with fair subscription models and steady income.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================================================
+         10. TECHNOLOGIES I BUILD WITH (BORDERED ROW OF GOLD WORDMARKS)
+         ============================================================================= -->
+    <section class="ops-tech-logos-section">
+      <div class="container">
+        <div class="tech-logos-bordered-box">
+          <div class="tech-logos-title-label">Technologies I Build With</div>
+          <div class="tech-wordmarks-row" id="tech-wordmarks-row">
+            <!-- Rendered dynamically from config -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================================
+         11. CAREER INTERESTS & OPPORTUNITIES BANNER
+         ============================================================================= -->
+    <section class="ops-career-section">
+      <div class="container">
+        <div class="career-banner-box">
+          <h2 class="career-banner-title">Career Interests & Ambitions</h2>
+          <p class="career-banner-text">
+            I am actively seeking Software Developer / Full-Stack Developer internships, entry-level engineering roles, and collaborative technology product ventures.
+          </p>
+
+          <div class="career-domains-pills">
+            <span class="skill-pill-tag">Full-Stack Development</span>
+            <span class="skill-pill-tag">.NET Enterprise Engineering</span>
+            <span class="skill-pill-tag">Software Engineering</span>
+            <span class="skill-pill-tag">AI & Machine Learning</span>
+            <span class="skill-pill-tag">Mobile Application Development</span>
+            <span class="skill-pill-tag">Cloud & Backend Systems</span>
+          </div>
+
+          <a href="#contact" class="btn-gold-editorial">
+            <span>Let's Connect</span>
+            <i data-lucide="arrow-down" style="width: 14px; height: 14px;"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================================
+         12. CONTACT FOOTER ("LET'S CREATE SOMETHING ICONIC")
+         ============================================================================= -->
+    <footer id="contact" class="ops-contact-footer">
+      <div class="container">
+        
+        <div class="footer-columns-grid">
+          
+          <div class="footer-callout-box">
+            <h2 class="footer-callout-heading">
+              Let's Create<br>
+              <span class="italic-gold">Something Iconic</span>
+            </h2>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; max-width: 380px; margin-bottom: 24px;">
+              Available for software developer roles, full-stack engineering internships, and technology collaborations worldwide.
+            </p>
+
+            <!-- Working Contact Form with Validation -->
+            <form id="footer-contact-form" class="footer-form-wrapper">
+              <input type="text" name="name" class="footer-input-field" placeholder="Your Name" required>
+              <input type="email" name="email" class="footer-input-field" placeholder="Email Address" required>
+              <textarea name="message" class="footer-textarea-field" placeholder="How can we collaborate?" required></textarea>
+              <button type="submit" class="btn-gold-editorial" style="align-self: flex-start;">
+                <span>Send Inquiry</span>
+                <i data-lucide="send" style="width: 14px; height: 14px;"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="footer-coords-and-card">
+            <ul class="footer-contacts-list">
+              <li class="footer-contact-item">
+                <i data-lucide="mail" class="footer-gold-icon"></i>
+                <a href="mailto:dev.somprakash@gmail.com" class="footer-contact-link">dev.somprakash@gmail.com</a>
+              </li>
+              <li class="footer-contact-item">
+                <i data-lucide="phone" class="footer-gold-icon"></i>
+                <a href="tel:+918338072738" class="footer-contact-link">+91 8338072738</a>
+              </li>
+              <li class="footer-contact-item">
+                <i data-lucide="map-pin" class="footer-gold-icon"></i>
+                <span class="footer-contact-link">Jajpur, Odisha, India</span>
+              </li>
+              <li class="footer-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="footer-gold-icon" style="flex-shrink:0;">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <a href="https://github.com/thecodergen" target="_blank" rel="noopener noreferrer" class="footer-contact-link">github.com/thecodergen</a>
+              </li>
+              <li class="footer-contact-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" class="footer-gold-icon" style="flex-shrink:0;">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+                <a href="https://linkedin.com/in/omprakashsethy" target="_blank" rel="noopener noreferrer" class="footer-contact-link">linkedin.com/in/omprakashsethy</a>
+              </li>
+            </ul>
+
+            <!-- Monogram Business-Card Block -->
+            <div class="monogram-card-block">
+              <div class="monogram-card-star">
+                <i data-lucide="sparkles" style="width: 28px; height: 28px; color: var(--gold-primary);"></i>
+              </div>
+              <div class="monogram-card-name">Om Prakash Sethy</div>
+              <div class="monogram-card-role">Software Developer</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-copyright-bottom">
+          <div>© 2026 Om Prakash Sethy. All Rights Reserved.</div>
+          <div>Designing Purpose • Building Legacy</div>
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+  <!-- =============================================================================
+       PROJECT DETAIL MODAL DIALOG
+       ============================================================================= -->
+  <div id="project-modal-backdrop" class="project-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="project-modal-dialog">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close project modal">✕</button>
+      
+      <div id="modal-category-label" class="modal-category-label">Category</div>
+      <h2 id="modal-project-title" class="modal-project-title">Project Title</h2>
+      <div id="modal-role-pill" class="modal-role-pill">Role</div>
+      
+      <p id="modal-overview-text" class="modal-overview-text">Overview text...</p>
+      
+      <div style="font-family: var(--font-sans-label); font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold-primary); margin-bottom: 12px;">
+        Architectural Highlights & Key Features:
+      </div>
+      
+      <ul id="modal-features-list" class="modal-features-list">
+        <!-- Rendered dynamically -->
+      </ul>
+
+      <div style="font-family: var(--font-sans-label); font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold-primary); margin-bottom: 10px;">
+        Technology Stack:
+      </div>
+      <div id="modal-tech-chips" class="skills-pill-wrap" style="margin-bottom: 24px;">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="modal-footer-actions">
+        <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-outline-editorial">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span>GitHub Repository</span>
+        </a>
+        <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-gold-editorial">
+          <span>View Verified Document / Live</span>
+          <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================================================
+       CERTIFICATE DETAIL & PREVIEW MODAL DIALOG
+       ============================================================================= -->
+  <div id="cert-modal-backdrop" class="project-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title">
+    <div class="project-modal-dialog" style="max-width: 780px;">
+      <button id="modal-cert-close-btn" class="modal-close-btn" aria-label="Close certificate modal">✕</button>
+      
+      <div id="modal-cert-category-label" class="modal-category-label">Category</div>
+      <h2 id="modal-cert-title" class="modal-project-title" style="font-size: 1.85rem;">Certificate Title</h2>
+      <div id="modal-cert-issuer-badge" class="modal-role-pill">Issuer & Date</div>
+      
+      <p id="modal-cert-desc" class="modal-overview-text">Description...</p>
+      
+      <div style="background: rgba(15, 42, 32, 0.45); border: 1px solid var(--gold-border-subtle); border-radius: var(--radius-xs); padding: 18px 20px; margin-bottom: 24px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; font-size: 0.86rem;">
+          <div>
+            <span style="color: var(--text-muted-gold); font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; display: block; margin-bottom: 4px;">Issuing Authority</span>
+            <strong id="modal-cert-issuer" style="color: var(--text-warm-white);">Issuer</strong>
+          </div>
+          <div>
+            <span style="color: var(--text-muted-gold); font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; display: block; margin-bottom: 4px;">Faculty / Mentor</span>
+            <span id="modal-cert-instructor" style="color: var(--text-warm-white);">Instructor</span>
+          </div>
+          <div>
+            <span style="color: var(--text-muted-gold); font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; display: block; margin-bottom: 4px;">Issuance Date</span>
+            <span id="modal-cert-date" style="color: var(--gold-light);">Date</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer-actions">
+        <a id="modal-cert-download-link" href="#" target="_blank" download class="btn-outline-editorial">
+          <i data-lucide="download" style="width: 14px; height: 14px;"></i>
+          <span>Download PDF Document</span>
+        </a>
+        <a id="modal-cert-open-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-gold-editorial">
+          <span>Open Full Certificate PDF ↗</span>
+          <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back-to-Top Quick Pill -->
+  <a href="#hero" id="floating-quick-pill" aria-label="Back to top">
+    <i data-lucide="arrow-up" style="width: 14px; height: 14px;"></i>
+    <span>Top</span>
+  </a>
+
+  <!-- Toast Notification Feedback -->
+  <div id="editorial-toast" class="editorial-toast" role="alert" aria-live="polite"></div>
+
+  <!-- Scripts with Cache-Buster -->
+  <script src="config/portfolio-data.js?v=10.0"></script>
+  <script src="main.js?v=10.0"></script>
 
 </body>
 </html>
