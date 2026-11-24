@@ -37,14 +37,62 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Initialize Contact Form & Toast
   initContactForm();
 
-  // 6. Initialize Smooth Active Nav Tracking
+  // 6. Initialize Mobile Navigation Drawer
+  initMobileDrawer();
+
+  // 7. Initialize Smooth Active Nav Tracking
   initNavScrollObserver();
 
-  // 7. Initialize Lucide Icons
+  // 8. Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
   }
 });
+
+/**
+ * =============================================================================
+ * MOBILE LUXURY DRAWER NAVIGATION
+ * =============================================================================
+ */
+function initMobileDrawer() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const drawer = document.getElementById('mobile-nav-drawer');
+  const closeBtn = document.getElementById('mobile-drawer-close');
+  const drawerLinks = document.querySelectorAll('.mobile-drawer-link');
+
+  if (!menuBtn || !drawer) return;
+
+  function openDrawer() {
+    drawer.classList.add('active');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('active');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  menuBtn.addEventListener('click', openDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeDrawer();
+    });
+  });
+
+  drawer.addEventListener('click', (e) => {
+    if (e.target === drawer) closeDrawer();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('active')) {
+      closeDrawer();
+    }
+  });
+}
 
 /**
  * =============================================================================
